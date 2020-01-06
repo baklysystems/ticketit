@@ -4,8 +4,8 @@
     "type": "laravel-package",
     "keywords": ["laravel","helpdesk", "ticket", "support"],
     "require": {
-        "laravel/framework": "^6.1",
-        "laravelcollective/html": "^6.1",
+        "laravel/framework": "^5.1",
+        "laravelcollective/html": "^5.1",
         "illuminate/support": "^5.1",
         "yajra/laravel-datatables-oracle": "^6.0|^8.0",
         "jenssegers/date": "^3.0",
