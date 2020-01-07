@@ -12,7 +12,7 @@ class AlterUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('admins', function (Blueprint $table) {
             $table->boolean('ticketit_admin')->default(0);
             $table->boolean('ticketit_agent')->default(0);
         });
@@ -25,7 +25,7 @@ class AlterUsersTable extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('admins', function (Blueprint $table) {
             $table->dropColumn(['ticketit_admin', 'ticketit_agent']);
         });
     }

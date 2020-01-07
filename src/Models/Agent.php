@@ -2,12 +2,13 @@
 
 namespace Kordy\Ticketit\Models;
 
+use App\Admin;
 use App\User;
 use Auth;
 
-class Agent extends User
+class Agent extends Admin
 {
-    protected $table = 'users';
+    protected $table = 'admins';
 
     /**
      * list of all agents and returning collection.
@@ -92,7 +93,7 @@ class Agent extends User
     public static function isAgent($id = null)
     {
         if (isset($id)) {
-            $user = User::find($id);
+            $user = Admin::find($id);
             if ($user->ticketit_agent) {
                 return true;
             }
@@ -155,7 +156,7 @@ class Agent extends User
      */
     public function categories()
     {
-        return $this->belongsToMany('Kordy\Ticketit\Models\Category', 'ticketit_categories_users', 'user_id', 'category_id');
+        return $this->belongsToMany('Kordy\Ticketit\Models\Category', 'ticketit_categories_users', 'admin_id', 'category_id');
     }
 
     /**
@@ -178,18 +179,18 @@ class Agent extends User
     public function userTickets($complete = false)
     {
         if ($complete) {
-            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id')->whereNotNull('completed_at');
+            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id')->whereNotNull('completed_at');
         } else {
-            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id')->whereNull('completed_at');
+            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id')->whereNull('completed_at');
         }
     }
 
     public function tickets($complete = false)
     {
         if ($complete) {
-            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id')->whereNotNull('completed_at');
+            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id')->whereNotNull('completed_at');
         } else {
-            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id')->whereNull('completed_at');
+            return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id')->whereNull('completed_at');
         }
     }
 
@@ -246,7 +247,7 @@ class Agent extends User
      */
     public function userTotalTickets()
     {
-        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id');
+        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id');
     }
 
     /**
@@ -254,7 +255,7 @@ class Agent extends User
      */
     public function userCompleteTickets()
     {
-        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id')->whereNotNull('completed_at');
+        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id')->whereNotNull('completed_at');
     }
 
     /**
@@ -262,6 +263,6 @@ class Agent extends User
      */
     public function userOpenTickets()
     {
-        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'user_id')->whereNull('completed_at');
+        return $this->hasMany('Kordy\Ticketit\Models\Ticket', 'admin_id')->whereNull('completed_at');
     }
 }

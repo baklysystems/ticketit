@@ -4,7 +4,7 @@
             <li role="presentation" class="{!! $tools->fullUrlIs(action('\Kordy\Ticketit\Controllers\TicketsController@index')) ? "active" : "" !!}">
                 <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@index') }}">{{ trans('ticketit::lang.nav-active-tickets') }}
                     <span class="badge">
-                         <?php 
+                         <?php
                             if ($u->isAdmin()) {
                                 echo Kordy\Ticketit\Models\Ticket::active()->count();
                             } elseif ($u->isAgent()) {
@@ -19,7 +19,7 @@
             <li role="presentation" class="{!! $tools->fullUrlIs(action('\Kordy\Ticketit\Controllers\TicketsController@indexComplete')) ? "active" : "" !!}">
                 <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@indexComplete') }}">{{ trans('ticketit::lang.nav-completed-tickets') }}
                     <span class="badge">
-                        <?php 
+                        <?php
                             if ($u->isAdmin()) {
                                 echo Kordy\Ticketit\Models\Ticket::complete()->count();
                             } elseif ($u->isAgent()) {
