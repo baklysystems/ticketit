@@ -5,13 +5,30 @@
 @stop
 
 @section('content')
+	<style>
+		.dropdown-menu {
+			position: relative;
+		}
+	</style>
     @include('ticketit::shared.header')
     @include('ticketit::tickets.index')
 @stop
 
-@section('footer')
-	<script src="//cdn.datatables.net/v/bs/dt-{{ Kordy\Ticketit\Helpers\Cdn::DataTables }}/r-{{ Kordy\Ticketit\Helpers\Cdn::DataTablesResponsive }}/datatables.min.js"></script>
-	<script>
+{{--@section('footer')--}}
+@section('scripts')
+	{{--{{dd( Kordy\Ticketit\Helpers\Cdn::DataTables ,  Kordy\Ticketit\Helpers\Cdn::DataTablesResponsive)}}--}}
+	{{--<script src="//cdn.datatables.net/v/bs/dt-{{ Kordy\Ticketit\Helpers\Cdn::DataTables }}/r-{{ Kordy\Ticketit\Helpers\Cdn::DataTablesResponsive }}/datatables.min.js"></script>--}}
+
+
+	{{--<link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>--}}
+	{{--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>--}}
+	<script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	{{--<script src="//cdn.datatables.net/plug-ins/505bef35b56/integration/bootstrap/3/dataTables.bootstrap.js"></script>--}}
+	{{--<script src="//cdn.datatables.net/responsive/1.0.7/js/dataTables.responsive.min.js"></script>--}}
+
+	<script type="text/javascript">
+
+
 	    $('.table').DataTable({
 	        processing: false,
 	        serverSide: true,
@@ -48,10 +65,10 @@
 	            { data: 'subject', name: 'subject' },
 	            { data: 'status', name: 'ticketit_statuses.name' },
 	            { data: 'updated_at', name: 'ticketit.updated_at' },
-            	{ data: 'agent', name: 'users.name' },
+            	{ data: 'agent', name: 'admins.name' },
 	            @if( $u->isAgent() || $u->isAdmin() )
 		            { data: 'priority', name: 'ticketit_priorities.name' },
-	            	{ data: 'owner', name: 'users.name' },
+	            	{ data: 'owner', name: 'admins.name' },
 		            { data: 'category', name: 'ticketit_categories.name' }
 	            @endif
 	        ]

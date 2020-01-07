@@ -268,7 +268,7 @@ class SettingsTableSeeder extends Seeder
              *
              * Default: __DIR__.'/routes.php'
              */
-            'routes' => base_path('vendor/kordy/ticketit/src').'/routes.php',
+            'routes' => base_path('vendor/baklysystems/ticketit/src').'/routes.php',
 
         ];
     }
