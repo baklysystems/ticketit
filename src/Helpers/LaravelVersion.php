@@ -87,8 +87,9 @@ class LaravelVersion
     public static function authMiddleware()
     {
         //return ['web','admin'];
-        return ['web'];
 
+        return ['web'];
+        
         if (static::min('5.2') && static::lt('5.3') && app(Router::class)->resolveMiddlewareClassName('web') != 'web') {
             return ['web', 'auth'];
         } elseif (static::min('5.3')) {
