@@ -6,7 +6,7 @@ use App\Admin;
 use App\User;
 use Auth;
 
-class Agent extends Admin
+class Agent extends User
 {
     protected $table = 'admins';
 
@@ -93,7 +93,7 @@ class Agent extends Admin
     public static function isAgent($id = null)
     {
         if (isset($id)) {
-            $user = Admin::find($id);
+            $user = User::find($id);
             if ($user->ticketit_agent) {
                 return true;
             }

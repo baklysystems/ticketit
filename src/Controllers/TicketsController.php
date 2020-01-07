@@ -223,7 +223,8 @@ class TicketsController extends Controller
         $ticket->category_id = $request->category_id;
 
         $ticket->status_id = Setting::grab('default_status_id');
-        $ticket->user_id = auth()->user()->id;
+        //$ticket->user_id = auth()->user()->id;
+        $ticket->admin_id = auth()->user()->id;
         $ticket->autoSelectAgent();
 
         $ticket->save();
