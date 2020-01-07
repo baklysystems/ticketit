@@ -54,9 +54,9 @@ class InstallController extends Controller
             $inactive_migrations = $this->inactiveMigrations();
             // if Laravel v5.2 or 5.3
             if (version_compare(app()->version(), '5.2.0', '>=')) {
-                $users_list = Admin::pluck('name', 'id')->toArray();
+                $users_list = User::pluck('name', 'id')->toArray();
             } else { // if Laravel v5.1
-                $users_list = Admin::lists('name', 'id')->toArray();
+                $users_list = User::lists('name', 'id')->toArray();
             }
 
             return view('ticketit::install.index', compact('views_files_list', 'inactive_migrations', 'users_list'));
@@ -87,7 +87,7 @@ class InstallController extends Controller
         }
         $this->initialSettings($master);
         $admin_id = $request->admin_id;
-        $admin = Admin::find($admin_id);
+        $admin = User::find($admin_id);
         $admin->ticketit_admin = true;
         $admin->save();
 

@@ -87,7 +87,7 @@ class Ticket extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\Admin', 'admin_id');
+        return $this->belongsTo('App\User', 'admin_id');
     }
 
     /**
