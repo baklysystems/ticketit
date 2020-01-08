@@ -5,11 +5,6 @@
 @stop
 
 @section('content')
-	<style>
-		.dropdown-menu {
-			position: relative;
-		}
-	</style>
     @include('ticketit::shared.header')
     @include('ticketit::tickets.index')
 @stop
