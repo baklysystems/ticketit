@@ -50,10 +50,10 @@ class CommentsController extends Controller
 
         $comment = new Models\Comment();
 
-     ///   $comment->setPurifiedContent($request->get('content'));
 
         $comment->ticket_id = $request->get('ticket_id');
-        $comment->user_id = \Auth::user()->id;
+        $comment->admin_id = \Auth::user()->id;
+        $comment->setPurifiedContent($request->get('content'));
         $comment->save();
 
 

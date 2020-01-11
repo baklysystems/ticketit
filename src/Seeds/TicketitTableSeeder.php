@@ -137,7 +137,7 @@ class TicketitTableSeeder extends Seeder
                 $ticket->html = nl2br($ticket->content);
                 $ticket->status_id = $rand_status;
                 $ticket->priority_id = $priority_id;
-                $ticket->user_id = $user_info->id;
+                $ticket->admin_id = $user_info->id;
                 $ticket->agent_id = $agent_id;
                 $ticket->category_id = $rand_category;
                 $ticket->created_at = \Carbon\Carbon::now()->subDays($random_create);
@@ -170,9 +170,9 @@ class TicketitTableSeeder extends Seeder
                     $comment->html = nl2br($comment->content);
 
                     if ($c % 2 == 0) {
-                        $comment->user_id = $ticket->user_id;
+                        $comment->admin_id = $ticket->admin_id;
                     } else {
-                        $comment->user_id = $ticket->agent_id;
+                        $comment->admin_id = $ticket->agent_id;
                     }
                     $comment->created_at = $random_comment_date;
                     $comment->updated_at = $random_comment_date;

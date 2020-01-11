@@ -41,6 +41,13 @@
             </div>
             <br>
             <div class="form-group">
+                {!! CollectiveForm::label('content_img', trans('ticketit::lang.image') . trans('ticketit::lang.colon'), ['class' => 'col-lg-2 control-label']) !!}
+                <div class="col-lg-10">
+                    {!! CollectiveForm::file('content_img', null, ['class' => 'form-control']) !!}
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                     {!! link_to_route($setting->grab('main_route').'.index', trans('ticketit::lang.btn-back'), null, ['class' => 'btn btn-default']) !!}
                     {!! CollectiveForm::submit(trans('ticketit::lang.btn-submit'), ['class' => 'btn btn-primary']) !!}
@@ -50,6 +57,6 @@
     </div>
 @endsection
 
-@section('footer')
+@section('scripts')
     @include('ticketit::tickets.partials.summernote')
 @append

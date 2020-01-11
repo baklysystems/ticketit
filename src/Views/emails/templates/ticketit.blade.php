@@ -144,8 +144,8 @@
                           <w:anchorlock/>
                           <center>
                             <![endif]-->
-                            <a href="{{ url($setting->grab('admin_route')) }}"
-                            style="background-color:{{ $setting->grab('email.color_button_bg') }};border-radius:4px;color:#ffffff;display:inline-block;font-family: Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">{{ $setting->grab('email.dashboard') }}</a>
+                            {{--<a href="{{ url($setting->grab('admin_route')) }}"--}}
+                            {{--style="background-color:{{ $setting->grab('email.color_button_bg') }};border-radius:4px;color:#ffffff;display:inline-block;font-family: Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">{{ $setting->grab('email.dashboard') }}</a>--}}
                         <!--[if mso]>
                           </center>
                         </v:roundrect>
@@ -161,18 +161,18 @@
                 <td style="background-color:{{ $setting->grab('email.color_footer_bg') }};">
                     <br>
                     <br>
-                      @if( (bool) $setting->grab('email.google_plus_link') )
-                        <a href="{{ $setting->grab('email.google_plus_link') }}"><img src="https://www.filepicker.io/api/file/R4VBTe2UQeGdAlM7KDc4" alt="google+"></a>
-                      @endif
-                      @if( (bool) $setting->grab('email.facebook_link') )
-                        <a href="{{ $setting->grab('email.facebook_link') }}"><img src="https://www.filepicker.io/api/file/cvmSPOdlRaWQZnKFnBGt" alt="facebook"></a>
-                      @endif
-                      @if( (bool) $setting->grab('email.twitter_link') )
-                        <a href="{{ $setting->grab('email.twitter_link') }}"><img src="https://www.filepicker.io/api/file/Gvu32apSQDqLMb40pvYe" alt="twitter"></a>
-                      @endif
-                    <br>
-                    <br>
-                </td>
+                      {{--@if( (bool) $setting->grab('email.google_plus_link') )--}}
+                        {{--<a href="{{ $setting->grab('email.google_plus_link') }}"><img src="https://www.filepicker.io/api/file/R4VBTe2UQeGdAlM7KDc4" alt="google+"></a>--}}
+                      {{--@endif--}}
+                      {{--@if( (bool) $setting->grab('email.facebook_link') )--}}
+                        {{--<a href="{{ $setting->grab('email.facebook_link') }}"><img src="https://www.filepicker.io/api/file/cvmSPOdlRaWQZnKFnBGt" alt="facebook"></a>--}}
+                      {{--@endif--}}
+                      {{--@if( (bool) $setting->grab('email.twitter_link') )--}}
+                        {{--<a href="{{ $setting->grab('email.twitter_link') }}"><img src="https://www.filepicker.io/api/file/Gvu32apSQDqLMb40pvYe" alt="twitter"></a>--}}
+                      {{--@endif--}}
+                    {{--<br>--}}
+                    {{--<br>--}}
+                {{--</td>--}}
             </tr>
             <!-- Not implemented
             <tr>
@@ -182,15 +182,17 @@
               </td>
           </tr>
           -->
-          <tr>
-            <td style="color:#933f24; font-size:12px;">
-             <a href="{{ $setting->grab('email.footer_link') }}">
-                {{ $setting->grab('email.footer') }}
-             </a>
-             <br>
-             <br>
-         </td>
-     </tr>
+
+
+          {{--<tr>--}}
+            {{--<td style="color:#933f24; font-size:12px;">--}}
+             {{--<a href="{{ $setting->grab('email.footer_link') }}">--}}
+                {{--{{ $setting->grab('email.footer') }}--}}
+             {{--</a>--}}
+             {{--<br>--}}
+             {{--<br>--}}
+         {{--</td>--}}
+     {{--</tr>--}}
  </table>
 
 

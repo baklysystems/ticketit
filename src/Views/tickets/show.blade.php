@@ -10,7 +10,7 @@
         @include('ticketit::tickets.partials.comment_form')
 @endsection
 
-@section('footer')
+@section('scripts')
     <script>
         $(document).ready(function() {
             $( ".deleteit" ).click(function( event ) {

@@ -53,7 +53,7 @@
                 <div class="panel-body">
                     <div class="col-md-12">
                         <div class="col-md-6">
-                            <p> <strong>{{ trans('ticketit::lang.owner') }}</strong>{{ trans('ticketit::lang.colon') }}{{ $ticket->user_id == $u->id ? $u->name : $ticket->user->name }}</p>
+                            <p> <strong>{{ trans('ticketit::lang.owner') }}</strong>{{ trans('ticketit::lang.colon') }}{{ $ticket->admin_id == $u->id ? $u->name : $ticket->user->name }}</p>
                             <p>
                                 <strong>{{ trans('ticketit::lang.status') }}</strong>{{ trans('ticketit::lang.colon') }}
                                 @if( $ticket->isComplete() && ! $setting->grab('default_close_status_id') )

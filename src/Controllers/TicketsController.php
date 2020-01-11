@@ -215,7 +215,6 @@ class TicketsController extends Controller
         ]);
 
         $ticket = new Ticket();
-
         $ticket->subject = $request->subject;
 
         $ticket->setPurifiedContent($request->get('content'));
