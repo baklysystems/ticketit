@@ -1,7 +1,7 @@
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="content">
-            <h2 class="header">
+            <h2 class="">
                 {{ $ticket->subject }}
                 <span class="pull-right">
                     @if(! $ticket->completed_at && $close_perm == 'yes')
@@ -57,7 +57,7 @@
                             <p>
                                 <strong>{{ trans('ticketit::lang.status') }}</strong>{{ trans('ticketit::lang.colon') }}
                                 @if( $ticket->isComplete() && ! $setting->grab('default_close_status_id') )
-                                    <span style="color: blue">Complete</span>
+                                    <span style="color: blue">Closed</span>
                                 @else
                                     <span style="color: {{ $ticket->status->color }}">{{ $ticket->status->name }}</span>
                                 @endif
