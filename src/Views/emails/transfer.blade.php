@@ -9,7 +9,12 @@
 @stop
 
 @section('link')
-	<a style="color:#ffffff" href="{{ route($setting->grab('main_route').'.show', $ticket->id) }}">
+	{{--<a style="color:#ffffff" href="{{ route($setting->grab('main_route').'.show', $ticket->id) }}">--}}
+	@if($ticket->workspace_id != null)
+		<a style="color:#ffffff" href="{{env('APP_Ticket_mt_URL')}}/{{$setting->grab('main_route')}}/{{ $ticket->id }}">
+	@else
+		<a style="color:#ffffff" href="{{env('APP_Ticket_dev_URL')}}/{{$setting->grab('main_route')}}/{{  $ticket->id }}">
+	@endif
 		{{ trans('ticketit::email/globals.view-ticket') }}
 	</a>
 @stop

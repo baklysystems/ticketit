@@ -32,7 +32,8 @@ class CreateTicketitTables extends Migration
 
         Schema::create('ticketit_categories_users', function (Blueprint $table) {
             $table->integer('category_id')->unsigned();
-            $table->integer('admin_id')->unsigned();
+            //$table->integer('admin_id')->unsigned();
+            $table->char('admin_id',36);
         });
 
         Schema::create('ticketit', function (Blueprint $table) {
@@ -41,8 +42,10 @@ class CreateTicketitTables extends Migration
             $table->longText('content');
             $table->integer('status_id')->unsigned();
             $table->integer('priority_id')->unsigned();
-            $table->integer('admin_id')->unsigned();
-            $table->integer('agent_id')->unsigned();
+            //$table->integer('admin_id')->unsigned();
+            $table->char('admin_id',36);
+            //$table->integer('agent_id')->unsigned();
+            $table->char('agent_id',36);
             $table->integer('category_id')->unsigned();
             $table->timestamps();
         });
@@ -50,7 +53,8 @@ class CreateTicketitTables extends Migration
         Schema::create('ticketit_comments', function (Blueprint $table) {
             $table->increments('id');
             $table->text('content');
-            $table->integer('admin_id')->unsigned();
+            //$table->integer('admin_id')->unsigned();
+            $table->char('admin_id',36);
             $table->integer('ticket_id')->unsigned();
             $table->timestamps();
         });
@@ -58,7 +62,8 @@ class CreateTicketitTables extends Migration
         Schema::create('ticketit_audits', function (Blueprint $table) {
             $table->increments('id');
             $table->text('operation');
-            $table->integer('admin_id')->unsigned();
+            //$table->integer('admin_id')->unsigned();
+            $table->char('admin_id',36);
             $table->integer('ticket_id')->unsigned();
             $table->timestamps();
         });

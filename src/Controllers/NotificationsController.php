@@ -9,7 +9,7 @@ use Kordy\Ticketit\Helpers\LaravelVersion;
 use Kordy\Ticketit\Models\Comment;
 use Kordy\Ticketit\Models\Setting;
 use Kordy\Ticketit\Models\Ticket;
-
+use App\User;
 
 class NotificationsController extends Controller
 {

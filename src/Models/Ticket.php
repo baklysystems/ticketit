@@ -87,7 +87,13 @@ class Ticket extends Model
      */
     public function user()
     {
-        return $this->belongsTo('App\User', 'admin_id');
+
+        if($this->workspace_id != null) {
+            return $this->belongsTo('App\User', 'admin_id');
+        }else{
+            return $this->belongsTo('App\Developer', 'admin_id');
+        }
+
     }
 
     /**
