@@ -18,10 +18,9 @@
 
         $("textarea.summernote-editor").summernote(options);
 
-        $("label[for=content]").click(function() {
+        $("label[for=content]").click(function () {
             $("#content").summernote("focus");
         });
-
     });
 
 

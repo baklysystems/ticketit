@@ -21,14 +21,14 @@ class AddIndexes extends Migration
             $table->index('subject');
             $table->index('status_id');
             $table->index('priority_id');
-            $table->index('admin_id');
+            $table->index('user_id');
             $table->index('agent_id');
             $table->index('category_id');
             $table->index('completed_at');
         });
 
         Schema::table('ticketit_comments', function (Blueprint $table) {
-            $table->index('admin_id');
+            $table->index('user_id');
             $table->index('ticket_id');
         });
 

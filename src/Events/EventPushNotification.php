@@ -2,11 +2,11 @@
 
 namespace Kordy\Ticketit\Events;
 
-//use App\Events\Event;
+use App\Events\Event;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class EventPushNotification ///extends Event
+class EventPushNotification extends Event
 {
     use SerializesModels;
     public $user_ids;

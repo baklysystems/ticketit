@@ -8,7 +8,7 @@ return [
   'nav-settings'                  => 'Settings',
   'nav-agents'                    => 'Agents',
   'nav-dashboard'                 => 'Dashboard',
-  'nav-categories'                => 'Types',
+  'nav-categories'                => 'Categories',
   'nav-priorities'                => 'Priorities',
   'nav-statuses'                  => 'Statuses',
   'nav-configuration'             => 'Configuration',
@@ -18,8 +18,8 @@ return [
   'table-id'                      => 'ID',
   'table-name'                    => 'Name',
   'table-action'                  => 'Action',
-  'table-categories'              => 'Types',
-  'table-join-category'           => 'Joined Types',
+  'table-categories'              => 'Categories',
+  'table-join-category'           => 'Joined Categories',
   'table-remove-agent'            => 'Remove from agents',
   'table-remove-administrator'    => 'Remove from administrators', // New
 
@@ -55,10 +55,10 @@ return [
   'index-3-months'                      => '3 months',
   'index-6-months'                      => '6 months',
   'index-12-months'                     => '12 months',
-  'index-tickets-share-per-category'    => 'Tickets share per type',
+  'index-tickets-share-per-category'    => 'Tickets share per category',
   'index-tickets-share-per-agent'       => 'Tickets share per agent',
-  'index-categories'                    => 'Types',
-  'index-category'                      => 'Type',
+  'index-categories'                    => 'Categories',
+  'index-category'                      => 'Category',
   'index-agents'                        => 'Agents',
   'index-agent'                         => 'Agent',
   'index-administrators'                => 'Administrators',  //new
@@ -71,7 +71,7 @@ return [
   'index-total'                         => 'Total',
   'index-month'                         => 'Month',
   'index-performance-chart'             => 'How many days in average to resolve a ticket?',
-  'index-categories-chart'              => 'Tickets distribution per type',
+  'index-categories-chart'              => 'Tickets distribution per category',
   'index-agents-chart'                  => 'Tickets distribution per Agent',
 
 // tickets-admin/agent/____
@@ -95,15 +95,15 @@ return [
   'administrator-create-select-user'            => 'Select user accounts to be added as administrators',  //new
 
 // tickets-admin/category/____
-  'category-index-title'          => 'types Management',
-  'btn-create-new-category'       => 'Create new type',
-  'category-index-no-categories'  => 'There are no types, ',
-  'category-index-create-new'     => 'create new type',
-  'category-index-js-delete'      => 'Are you sure you want to delete the type: ',
-  'category-create-title'         => 'Create New Type',
+  'category-index-title'          => 'Categories Management',
+  'btn-create-new-category'       => 'Create new category',
+  'category-index-no-categories'  => 'There are no categories, ',
+  'category-index-create-new'     => 'create new category',
+  'category-index-js-delete'      => 'Are you sure you want to delete the category: ',
+  'category-create-title'         => 'Create New Category',
   'category-create-name'          => 'Name',
   'category-create-color'         => 'Color',
-  'category-edit-title'           => 'Edit Type: :name',
+  'category-edit-title'           => 'Edit Category: :name',
 
 // tickets-admin/priority/____
   'priority-index-title'          => 'Priorities Management',

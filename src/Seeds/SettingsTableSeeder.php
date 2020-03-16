@@ -244,7 +244,7 @@ class SettingsTableSeeder extends Seeder
              *
              * This setting stores the path to the json config file, relative to project route
              */
-            'summernote_options_json_file' => 'vendor/baklysystems/ticketit/src/JSON/summernote_init.json',
+            'summernote_options_json_file' => 'vendor/kordy/ticketit/src/JSON/summernote_init.json',
 
             /*
              * Set which html tags are allowed

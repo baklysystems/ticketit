@@ -6,8 +6,8 @@ return [
   *  Constants
   */
 
-  'nav-active-tickets'               => 'Open Tickets',
-  'nav-completed-tickets'            => 'Closed Tickets',
+  'nav-active-tickets'               => 'Active Tickets',
+  'nav-completed-tickets'            => 'Completed Tickets',
 
   // Tables
   'table-id'                         => '#',
@@ -17,7 +17,7 @@ return [
   'table-last-updated'               => 'Last Updated',
   'table-priority'                   => 'Priority',
   'table-agent'                      => 'Agent',
-  'table-category'                   => 'Type',
+  'table-category'                   => 'Category',
 
   // Datatables
   'table-decimal'                    => '',
@@ -44,11 +44,11 @@ return [
   'btn-close'                        => 'Close',
   'btn-delete'                       => 'Delete',
   'btn-edit'                         => 'Edit',
-  'btn-mark-complete'                => 'Mark Closed',
+  'btn-mark-complete'                => 'Mark Complete',
   'btn-submit'                       => 'Submit',
 
   'agent'                            => 'Agent',
-  'category'                         => 'Type',
+  'category'                         => 'Category',
   'colon'                            => ': ',
   'comments'                         => 'Comments',
   'created'                          => 'Created',
@@ -74,11 +74,11 @@ return [
 // tickets/____
   'index-my-tickets'                 => 'My Tickets',
   'btn-create-new-ticket'            => 'Create new ticket',
-  'index-complete-none'              => 'There are no closed tickets',
+  'index-complete-none'              => 'There are no complete tickets',
   'index-active-check'               => 'Be sure to check Active Tickets if you cannot find your ticket.',
   'index-active-none'                => 'There are no active tickets,',
   'index-create-new-ticket'          => 'create new ticket',
-  'index-complete-check'             => 'Be sure to check Closed Tickets if you cannot find your ticket.',
+  'index-complete-check'             => 'Be sure to check Complete Tickets if you cannot find your ticket.',
 
   'create-ticket-title'              => 'New Ticket Form',
   'create-new-ticket'                => 'Create New Ticket',
@@ -97,14 +97,14 @@ return [
 // AgentsController
   'agents-are-added-to-agents'                      => 'Agents :names are added to agents',
   'administrators-are-added-to-administrators'      => 'Administrators :names are added to administrators', //New
-  'agents-joined-categories-ok'                     => 'Joined types successfully',
+  'agents-joined-categories-ok'                     => 'Joined categories successfully',
   'agents-is-removed-from-team'                     => 'Removed agent\s :name from the agent team',
   'administrators-is-removed-from-team'             => 'Removed administrator\s :name from the administrators team', // New
 
 // CategoriesController
-  'category-name-has-been-created'   => 'The type :name has been created!',
-  'category-name-has-been-modified'  => 'The type :name has been modified!',
-  'category-name-has-been-deleted'   => 'The type :name has been deleted!',
+  'category-name-has-been-created'   => 'The category :name has been created!',
+  'category-name-has-been-modified'  => 'The category :name has been modified!',
+  'category-name-has-been-deleted'   => 'The category :name has been deleted!',
 
 // PrioritiesController
   'priority-name-has-been-created'   => 'The priority :name has been created!',
@@ -135,7 +135,7 @@ return [
   'the-ticket-has-been-created'      => 'The ticket has been created!',
   'the-ticket-has-been-modified'     => 'The ticket has been modified!',
   'the-ticket-has-been-deleted'      => 'The ticket :name has been deleted!',
-  'the-ticket-has-been-completed'    => 'The ticket :name has been closed!',
+  'the-ticket-has-been-completed'    => 'The ticket :name has been completed!',
   'the-ticket-has-been-reopened'     => 'The ticket :name has been reopened!',
   'you-are-not-permitted-to-do-this' => 'You are not permitted to do this action!',
 

@@ -60,8 +60,7 @@ class TicketsController extends Controller
         }
 
         $collection
-            //->join('users', 'users.id', '=', 'ticketit.user_id')
-            ->join('admins', 'admins.id', '=', 'ticketit.admin_id')
+            ->join('users', 'users.id', '=', 'ticketit.user_id')
             ->join('ticketit_statuses', 'ticketit_statuses.id', '=', 'ticketit.status_id')
             ->join('ticketit_priorities', 'ticketit_priorities.id', '=', 'ticketit.priority_id')
             ->join('ticketit_categories', 'ticketit_categories.id', '=', 'ticketit.category_id')
@@ -75,7 +74,7 @@ class TicketsController extends Controller
                 'ticketit.id AS agent',
                 'ticketit.updated_at AS updated_at',
                 'ticketit_priorities.name AS priority',
-                'admins.name AS owner',
+                'users.name AS owner',
                 'ticketit.agent_id',
                 'ticketit_categories.name AS category',
             ]);
@@ -215,6 +214,7 @@ class TicketsController extends Controller
         ]);
 
         $ticket = new Ticket();
+
         $ticket->subject = $request->subject;
 
         $ticket->setPurifiedContent($request->get('content'));
@@ -223,8 +223,7 @@ class TicketsController extends Controller
         $ticket->category_id = $request->category_id;
 
         $ticket->status_id = Setting::grab('default_status_id');
-        //$ticket->user_id = auth()->user()->id;
-        $ticket->admin_id = auth()->user()->id;
+        $ticket->user_id = auth()->user()->id;
         $ticket->autoSelectAgent();
 
         $ticket->save();

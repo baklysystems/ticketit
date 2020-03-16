@@ -87,13 +87,7 @@ class Ticket extends Model
      */
     public function user()
     {
-
-        if($this->workspace_id != null) {
-            return $this->belongsTo('App\User', 'admin_id');
-        }else{
-            return $this->belongsTo('App\Developer', 'admin_id');
-        }
-
+        return $this->belongsTo('App\User', 'user_id');
     }
 
     /**
@@ -163,7 +157,7 @@ class Ticket extends Model
      */
     public function scopeUserTickets($query, $id)
     {
-        return $query->where('admin_id', $id);
+        return $query->where('user_id', $id);
     }
 
     /**
@@ -190,7 +184,7 @@ class Ticket extends Model
     public function scopeAgentUserTickets($query, $id)
     {
         return $query->where(function ($subquery) use ($id) {
-            $subquery->where('agent_id', $id)->orWhere('admin_id', $id);
+            $subquery->where('agent_id', $id)->orWhere('user_id', $id);
         });
     }
 
