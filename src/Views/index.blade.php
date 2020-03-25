@@ -5,8 +5,11 @@
 @stop
 
 @section('content')
+	<div class="container">
+
     @include('ticketit::shared.header')
     @include('ticketit::tickets.index')
+	</div>
 @stop
 
 @section('footer')
